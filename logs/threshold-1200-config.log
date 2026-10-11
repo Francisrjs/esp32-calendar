@@ -1,0 +1,10 @@
+QA silent: audio output and automatic capture disabled
+assistant request: id=bc8a34c3-dbae-4e35-ad3d-979baf7266df
+ui transition: rest -> listening phase=processing rms=67 threshold=500 generation=5
+assistant QA result: {"request_id":"bc8a34c3-dbae-4e35-ad3d-979baf7266df","conversation_id":"91c2b8db-27aa-4870-aca4-709bafe85f9c","status":"succeeded","action":"settings.update","display_text":"Preferencia guardada: voice_threshold = 1200.","refresh":["settings"],"follow_up":true,"revision":2,"settings":{"voice_threshold":1200}}
+assistant result: id=bc8a34c3-dbae-4e35-ad3d-979baf7266df action=settings.update status=succeeded revision=2
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=139 threshold=1200 generation=5
+network result: kind=0 HTTP 200
+NVS cache skipped: events (5651 bytes); live data remains available
+network result: kind=1 HTTP 200

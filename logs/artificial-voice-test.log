@@ -1,0 +1,19 @@
+audio busy
+speech requested: artificial voice
+network result: kind=4 HTTP 200
+ui transition: listening -> response phase=response rms=11 threshold=500 generation=1
+speech queued for speaker
+network result: kind=5 HTTP 200
+speech playback: OK bytes=57200 microphone guard=1000 ms
+assistant ready: listening again
+voice trigger: source=rms rms=840.5 threshold=800 consecutive=3 peak=2232
+ui transition: response -> listening phase=recording rms=840 threshold=500 generation=2
+voice capture: duration=2619 ms samples=46720 speech_blocks=56 silence=900 ms result=upload
+ui transition: listening -> listening phase=processing rms=19 threshold=500 generation=2
+speech requested: artificial voice
+network result: kind=4 HTTP 200
+ui transition: listening -> response phase=response rms=15 threshold=500 generation=2
+speech queued for speaker
+network result: kind=5 HTTP 200
+speech playback: OK bytes=56800 microphone guard=1000 ms
+assistant ready: listening again

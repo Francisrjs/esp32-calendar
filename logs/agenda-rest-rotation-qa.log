@@ -1,0 +1,5 @@
+view=weekly
+ui transition: weekly -> rest phase=response rms=72 threshold=500 generation=4
+ui: firmware=views-v2 view=rest phase=response rms=30 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=194640
+Local time=00:04, sensor=ready, temperature=26.5C, humidity=48.7%

@@ -1,0 +1,75 @@
+{
+  "version": 2,
+  "settings": {
+    "name": "Compañero",
+    "threshold": 500,
+    "autoVoice": true,
+    "idle": 30,
+    "calendarRest": true
+  },
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Revisar el micrófono",
+      "date": "2026-10-10",
+      "done": false
+    },
+    {
+      "id": "task-2",
+      "title": "Preparar la semana",
+      "date": "2026-10-11",
+      "done": false
+    }
+  ],
+  "alarms": [
+    {
+      "id": "alarm-1",
+      "label": "Un buen comienzo",
+      "time": "07:30",
+      "days": "Lun a vie",
+      "enabled": true
+    },
+    {
+      "id": "alarm-2",
+      "label": "Hacer una pausa",
+      "time": "17:00",
+      "days": "Todos los días",
+      "enabled": false
+    }
+  ],
+  "events": [
+    {
+      "id": "event-1",
+      "title": "Un rato para crear",
+      "date": "2026-10-10",
+      "time": "16:00"
+    },
+    {
+      "id": "event-2",
+      "title": "Planificar la semana",
+      "date": "2026-10-11",
+      "time": "10:00"
+    }
+  ],
+  "music": {
+    "title": "Morning Light",
+    "artist": "Sesión de escritorio",
+    "duration": 224,
+    "position": 42,
+    "playing": true,
+    "volume": 45
+  },
+  "integrations": {
+    "calendar": {
+      "connected": false,
+      "email": "",
+      "calendarId": "primary",
+      "showOnDevice": true,
+      "lastSync": null
+    },
+    "music": {
+      "provider": "demo",
+      "target": "Escritorio"
+    }
+  }
+}

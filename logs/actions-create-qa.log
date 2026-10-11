@@ -1,0 +1,8 @@
+QA silent: audio output and automatic capture disabled
+assistant request: id=923bfaf5-8e7f-4e5d-a07d-0c4a82e7b41a
+ui transition: home -> listening phase=processing rms=8 threshold=500 generation=1
+assistant QA result: {"request_id":"923bfaf5-8e7f-4e5d-a07d-0c4a82e7b41a","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20","status":"succeeded","action":"task.create","display_text":"Tarea creada: Prueba QA acciones silenciosa · 2026-10-11","refresh":["tasks"],"follow_up":true,"entity_id":"48c69b28-b0b3-479c-a825-f888f5dd911c","revision":1}
+assistant result: id=923bfaf5-8e7f-4e5d-a07d-0c4a82e7b41a action=task.create status=succeeded revision=
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=8 threshold=500 generation=1
+network result: kind=0 HTTP 200

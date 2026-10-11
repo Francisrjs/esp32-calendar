@@ -1,0 +1,15 @@
+QA silent: audio output and automatic capture disabled
+assistant request: id=deb51a47-0787-464e-840b-f591e379b40c
+ui transition: home -> listening phase=processing rms=72 threshold=500 generation=1
+NVS cache skipped: events (5923 bytes); live data remains available
+network result: kind=1 HTTP 200
+assistant QA result: {"request_id":"deb51a47-0787-464e-840b-f591e379b40c","conversation_id":"a24b6e9e-4f76-49d2-9739-4136490e38b8","status":"succeeded","action":"view.change","display_text":"Abriendo la pantalla solicitada.","refresh":["calendar","tasks"],"follow_up":true,"local":{"view":"daily","date":"2026-10-11"}}
+assistant result: id=deb51a47-0787-464e-840b-f591e379b40c action=view.change status=succeeded revision=0
+network result: kind=7 HTTP 200
+ui transition: listening -> daily phase=response rms=61 threshold=500 generation=1
+network result: kind=0 HTTP 200
+NVS cache skipped: events (5923 bytes); live data remains available
+network result: kind=1 HTTP 200
+ui: firmware=views-v2 view=daily phase=response rms=117 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=193352
+Local time=00:05, sensor=ready, temperature=26.4C, humidity=48.7%

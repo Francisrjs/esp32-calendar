@@ -1,0 +1,6 @@
+assistant request: id=d6d28564-22f7-435d-a7ed-57de0ed200d4
+ui transition: rest -> listening phase=processing rms=126 threshold=500 generation=4
+assistant QA result: {"request_id":"d6d28564-22f7-435d-a7ed-57de0ed200d4","conversation_id":"82164f01-8711-4ab3-8d3d-661be754ae55","status":"failed","action":"calendar.list","display_text":"Habilitá Google Calendar API en el proyecto de Google Cloud.","refresh":[],"follow_up":true,"error_code":"calendar_provider_403_accessNotConfigured","retryable":true}
+assistant result: id=d6d28564-22f7-435d-a7ed-57de0ed200d4 action=calendar.list status=failed revision=0
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=11 threshold=500 generation=4

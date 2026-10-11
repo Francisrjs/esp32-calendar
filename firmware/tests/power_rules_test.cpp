@@ -1,0 +1,25 @@
+#include "../src/power_rules.h"
+constexpr AbsenceRule weekday{true,31,480,1020};
+static_assert(validAbsence(weekday),"weekday rule");
+static_assert(!absenceAt(weekday,479),"07:59");
+static_assert(absenceAt(weekday,480),"08:00 included");
+static_assert(absenceAt(weekday,1019),"16:59");
+static_assert(!absenceAt(weekday,1020),"17:00 excluded");
+static_assert(!absenceAt(weekday,5*1440+480),"Saturday excluded");
+constexpr AbsenceRule overnight{true,1,1320,420};
+static_assert(absenceAt(overnight,1320),"Monday 22");
+static_assert(absenceAt(overnight,1440+419),"Tuesday 06:59");
+static_assert(!absenceAt(overnight,1440+420),"Tuesday 07 ends");
+constexpr AbsenceRule sunday{true,64,1320,420};
+static_assert(absenceAt(sunday,0),"Sunday wraps into Monday");
+static_assert(absenceAt(sunday,-1),"week modulo supports previous minute");
+constexpr AbsenceRule merged[]={{true,1,480,600},{true,1,590,720},{true,1,720,780}};
+static_assert(absenceRemaining(merged,3,480)==300,"union merges overlaps and adjacency");
+static_assert(absenceRemaining(merged,3,780)==0,"union end");
+static_assert(!validAbsence(AbsenceRule{true,1,0,0}),"equal hours rejected");
+static_assert(!validAbsence(AbsenceRule{true,0,0,1}),"empty days rejected");
+static_assert(!validAbsence(AbsenceRule{true,128,0,1}),"ISO day range");
+static_assert(!validAbsence(AbsenceRule{true,1,1440,1}),"invalid time");
+static_assert(!absenceAt(AbsenceRule{false,1,480,1020},500),"disabled rule");
+constexpr AbsenceRule continuous[]={{true,127,0,720},{true,127,720,0}};
+static_assert(absenceRemaining(continuous,2,0)==10080,"all week bounded");

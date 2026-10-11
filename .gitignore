@@ -1,0 +1,4 @@
+.platformio-home/
+__pycache__/
+firmware/.pio/
+firmware/src/device_secrets.h

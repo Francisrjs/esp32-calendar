@@ -1,0 +1,7 @@
+Assistant: action TEXT (silent QA) | action status | action retry | calendar link | qa on/off
+Commands: wifi SSID|PASSWORD | pair CODE | task TITLE | event TITLE|START_ISO8601|END_ISO8601 | sync | ping | status | view home/tasks/calendar | help. KEY 1x=voice; 2x=next; 3x+=previous. config JSON | threshold 500/800 | listen | audio status | voice status.
+ui: firmware=views-v2 view=home phase=response rms=69 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=148728
+Local time=23:23, sensor=ready, temperature=24.6C, humidity=54.5%
+view=home
+network result: kind=0 HTTP 200

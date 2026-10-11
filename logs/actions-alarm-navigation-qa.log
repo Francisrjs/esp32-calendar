@@ -1,0 +1,24 @@
+QA silent: audio output and automatic capture disabled
+assistant request: id=1e07feef-2f3e-495a-9cfe-7ff9fa36cff1
+ui transition: rest -> listening phase=processing rms=8 threshold=500 generation=1
+assistant QA result: {"request_id":"1e07feef-2f3e-495a-9cfe-7ff9fa36cff1","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20","status":"succeeded","action":"alarm.create","display_text":"Alarma guardada: Prueba QA alarma silenciosa · 23:59 · Todos los días. Sonará si la placa está encendida y tiene hora válida.","refresh":["alarms"],"follow_up":true,"entity_id":"1e07feef-2f3e-495a-9cfe-7ff9fa36cff1","revision":1}
+assistant result: id=1e07feef-2f3e-495a-9cfe-7ff9fa36cff1 action=alarm.create status=succeeded revision=1
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=9 threshold=500 generation=1
+assistant request: id=b963c0cc-dc13-4027-8605-984e136c5f40
+view=calendar
+ui transition: response -> calendar phase=processing rms=10 threshold=500 generation=3
+network result: kind=0 HTTP 200
+assistant QA result: {"request_id":"b963c0cc-dc13-4027-8605-984e136c5f40","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20","status":"succeeded","action":"task.list","display_text":"No tenés tareas pendientes.","refresh":["tasks"],"follow_up":true}
+assistant result: id=b963c0cc-dc13-4027-8605-984e136c5f40 action=task.list status=succeeded revision=0
+network result: kind=7 HTTP 200
+ui: firmware=views-v2 view=calendar phase=processing rms=10 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=1, heap=145120
+Local time=16:59, sensor=ready, temperature=24.7C, humidity=51.1%
+network result: kind=0 HTTP 200
+assistant request: id=497efa5e-dae8-4ed2-93d0-42324af162c4
+ui transition: calendar -> listening phase=processing rms=10 threshold=500 generation=4
+assistant QA result: {"request_id":"497efa5e-dae8-4ed2-93d0-42324af162c4","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20","status":"succeeded","action":"environment.read","display_text":"Temperatura 24.7 grados; humedad 51 por ciento. Lectura de hace 1 segundos.","refresh":[],"follow_up":true}
+assistant result: id=497efa5e-dae8-4ed2-93d0-42324af162c4 action=environment.read status=succeeded revision=0
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=9 threshold=500 generation=4

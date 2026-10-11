@@ -1,0 +1,23 @@
+network result: kind=0 HTTP 200
+QA silent: audio output and automatic capture disabled
+assistant request: id=4abc09d5-ffdf-43e1-bbdc-1112586c9288
+ui transition: home -> listening phase=processing rms=30 threshold=500 generation=1
+NVS cache skipped: events (5498 bytes); live data remains available
+network result: kind=1 HTTP 200
+assistant QA result: {"request_id":"4abc09d5-ffdf-43e1-bbdc-1112586c9288","conversation_id":"82164f01-8711-4ab3-8d3d-661be754ae55","status":"succeeded","action":"calendar.list","display_text":"Agenda 2026-10-11:\n07:00 p. m. · REUNION POSGRADO INFORMATIVA","refresh":["calendar"],"follow_up":true}
+assistant result: id=4abc09d5-ffdf-43e1-bbdc-1112586c9288 action=calendar.list status=succeeded revision=0
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=46 threshold=500 generation=1
+network result: kind=0 HTTP 200
+NVS cache skipped: events (5498 bytes); live data remains available
+network result: kind=1 HTTP 200
+ui key: clicks=1 from=response
+ui transition: response -> listening phase=waiting rms=15 threshold=500 generation=2
+voice trigger: source=manual rms=17.7 threshold=500 consecutive=0 peak=60
+ui transition: listening -> listening phase=recording rms=17 threshold=500 generation=3
+ui: firmware=views-v2 view=listening phase=recording rms=1154 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=194928
+Local time=23:39, sensor=ready, temperature=26.8C, humidity=47.8%
+view=calendar
+ui transition: listening -> calendar phase=recording rms=1154 threshold=500 generation=4
+voice capture: duration=4179 ms samples=71680 speech_blocks=57 silence=900 ms result=upload

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Vincular ESP32 · SmartClock</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .pair-shell{max-width:760px;margin:0 auto;padding:48px 24px 80px}.pair-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 18px 45px #162a1b12}.pair-card h1{font-size:32px;letter-spacing:-.04em;margin:8px 0 12px}.pair-card p{color:#53615a;line-height:1.6}.pair-form{display:grid;gap:12px;margin:22px 0}.pair-form label{display:grid;gap:6px;color:#46524b;font-size:13px;font-weight:700}.pair-form input{width:100%;padding:12px;border:1px solid #cbd5cd;border-radius:9px;font:inherit;color:var(--ink);background:#fff}.pair-actions{display:flex;flex-wrap:wrap;gap:10px}.pair-actions button{border:0;border-radius:9px;padding:12px 16px;background:#107a5d;color:white;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer}.pair-actions button.secondary{background:#e7eee8;color:#1d372b}.pair-output{margin-top:20px;padding:16px;border-radius:12px;background:#f1f5ef;overflow-wrap:anywhere}.pair-code{display:block;margin:10px 0;font:700 17px 'DM Mono',monospace;letter-spacing:.04em}.pair-status{min-height:24px;margin-top:12px;color:#52625a}.pair-status.error{color:#a42b24}.pair-note{font-size:12px;color:#68756d}
+  </style>
+</head>
+<body>
+  <main class="pair-shell">
+    <span class="eyebrow">ESP32-S3-RLCD-4.2 / VINCULACIÓN</span>
+    <section class="pair-card">
+      <h1>Conectar el dispositivo</h1>
+      <p>Ingresá la URL y la clave pública de Supabase, y autenticá tu cuenta. La clave pública no es una clave secreta; nunca pegues aquí una clave <code>service_role</code> o <code>sb_secret</code>.</p>
+      <form id="config" class="pair-form">
+        <label>URL de Supabase<input id="project-url" type="url" value="https://ofyohmwlhvinrgsgjuul.supabase.co" required></label>
+        <label>Clave publicable<input id="publishable-key" type="password" autocomplete="off" placeholder="sb_publishable_…" required></label>
+        <label>Correo de tu cuenta Supabase<input id="email" type="email" autocomplete="email" placeholder="vos@ejemplo.com" required></label>
+        <div class="pair-actions"><button type="submit">Enviar enlace de acceso</button><button id="restore" class="secondary" type="button">Usar sesión activa</button></div>
+      </form>
+      <div class="pair-actions"><button id="pair" type="button" class="secondary" hidden>Crear código para la placa</button><button id="calendar" type="button" class="secondary" hidden>Conectar Google Calendar</button></div>
+      <div id="output" class="pair-output" hidden></div>
+      <p id="status" class="pair-status" role="status"></p>
+      <p class="pair-note">El código vence en 10 minutos y sólo se acepta una vez. En la placa ingresalo por USB/serie a 115200 como <code>pair CÓDIGO</code>. La sesión de usuario se queda en este navegador.</p>
+    </section>
+  </main>
+  <script type="module">
+    const $ = (id) => document.getElementById(id);
+    const stored = JSON.parse(localStorage.getItem('esp32-pair-config') || '{}');
+    $('project-url').value = stored.url || $('project-url').value;
+    $('publishable-key').value = stored.key || '';
+    $('email').value = stored.email || '';
+    let client;
+    const setStatus = (message, error = false) => { $('status').textContent = message; $('status').classList.toggle('error', error); };
+    async function connect() {
+      const url = $('project-url').value.trim().replace(/\/$/, '');
+      const key = $('publishable-key').value.trim();
+      if (!url || !key) throw new Error('Completá la URL y la clave publicable.');
+      localStorage.setItem('esp32-pair-config', JSON.stringify({ url, key, email: $('email').value.trim() }));
+      const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+      client = createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+      const { data, error } = await client.auth.getSession();
+      if (error) throw error;
+      if (data.session) showSession();
+      return client;
+    }
+    function showSession() { $('pair').hidden = false; $('calendar').hidden = false; setStatus('Sesión Supabase activa.'); }
+    async function callApi(route, payload = {}) {
+      const api = await connect();
+      const { data } = await api.auth.getSession();
+      if (!data.session) throw new Error('Primero iniciá sesión con el enlace enviado por correo.');
+      const { url, key } = JSON.parse(localStorage.getItem('esp32-pair-config'));
+      const response = await fetch(`${url}/functions/v1/esp32-api/${route}`, { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: key, Authorization: `Bearer ${data.session.access_token}` }, body: JSON.stringify(payload) });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || `Error ${response.status}`);
+      return result;
+    }
+    $('config').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      try {
+        const api = await connect();
+        const email = $('email').value.trim();
+        if (!email) throw new Error('Ingresá el correo de tu cuenta Supabase.');
+        const { error } = await api.auth.signInWithOtp({ email, options: { emailRedirectTo: location.href } });
+        if (error) throw error;
+        setStatus('Enlace enviado. Abrilo en este navegador y después volvé a esta página.');
+      } catch (error) { setStatus(error.message || 'No se pudo iniciar sesión.', true); }
+    });
+    $('restore').addEventListener('click', async () => {
+      try { await connect(); const { data } = await client.auth.getSession(); if (!data.session) throw new Error('No hay una sesión activa en este navegador.'); showSession(); }
+      catch (error) { setStatus(error.message || 'No se pudo abrir la sesión.', true); }
+    });
+    $('pair').addEventListener('click', async () => {
+      try {
+        const result = await callApi('pair-start', { device_name: 'ESP32-S3-RLCD-4.2' });
+        $('output').hidden = false;
+        $('output').innerHTML = `<strong>Código de vinculación</strong><code class="pair-code"></code><span>Vence: ${new Date(result.expires_at).toLocaleTimeString('es-AR')}</span><button id="copy-code" type="button" class="secondary">Copiar</button>`;
+        $('output').querySelector('.pair-code').textContent = result.pairing_code;
+        $('output').querySelector('#copy-code').addEventListener('click', () => navigator.clipboard.writeText(result.pairing_code));
+        setStatus('Ingresá el código por el monitor serie de la placa.');
+      } catch (error) { setStatus(error.message || 'No se pudo generar el código.', true); }
+    });
+    $('calendar').addEventListener('click', async () => {
+      try { const result = await callApi('calendar-connect'); location.href = result.authorize_url; }
+      catch (error) { setStatus(error.message || 'No se pudo iniciar Google OAuth.', true); }
+    });
+    try { await connect(); } catch { /* Configuración pendiente: el formulario sigue disponible. */ }
+  </script>
+</body>
+</html>

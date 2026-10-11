@@ -1,0 +1,45 @@
+view=speaking
+
+audio chime requested
+
+ui: firmware=views-v2 view=response phase=response rms=72 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=199064
+Local time=15:57, sensor=ready, temperature=25.3C, humidity=51.9%
+audio chime: I2S OK; microphone guard=1000 ms
+audio: ready=yes wake=voice enabled=on busy=no rms=39 threshold=800 allowed=yes peak=110 channels=[110,4,96,3] max=[2716,9,2583,132]
+
+--- louder test ---
+view=speaking
+ES7210 reg 00=41 status=0
+ES7210 reg 01=20 status=0
+ES7210 reg 02=C1 status=0
+ES7210 reg 04=01 status=0
+ES7210 reg 06=00 status=0
+ES7210 reg 07=20 status=0
+ES7210 reg 08=10 status=0
+ES7210 reg 11=60 status=0
+ES7210 reg 12=02 status=0
+ES7210 reg 40=42 status=0
+ES7210 reg 43=1A status=0
+ES7210 reg 44=1A status=0
+ES7210 reg 45=1A status=0
+ES7210 reg 46=1A status=0
+ES7210 reg 4B=00 status=0
+ES7210 reg 4C=00 status=0
+speaker: initialized=yes PA46=1 output=GPIO8 volume=-12dB
+ES8311 reg 00=80 status=0
+ES8311 reg 01=3F status=0
+ES8311 reg 02=00 status=0
+ES8311 reg 06=03 status=0
+ES8311 reg 07=00 status=0
+ES8311 reg 08=FF status=0
+ES8311 reg 09=0C status=0
+ES8311 reg 0D=01 status=0
+ES8311 reg 12=00 status=0
+ES8311 reg 31=00 status=0
+ES8311 reg 32=AE status=0
+ES8311 reg 37=08 status=0
+audio chime requested
+ui transition: home -> response phase=waiting rms=15 threshold=500 generation=1
+audio chime: I2S OK; microphone guard=1000 ms
+audio: ready=yes wake=voice enabled=on busy=no rms=18 threshold=800 allowed=yes peak=54 channels=[54,5,46,3] max=[1252,8,833,2916]

@@ -1,0 +1,12 @@
+assistant request: id=6d33db92-7425-4bc2-a06f-03309a53b8c4
+ui transition: daily -> listening phase=processing rms=16 threshold=500 generation=2
+assistant QA result: {"request_id":"6d33db92-7425-4bc2-a06f-03309a53b8c4","conversation_id":"a24b6e9e-4f76-49d2-9739-4136490e38b8","status":"succeeded","action":"view.change","display_text":"Abriendo la pantalla solicitada.","refresh":["calendar","tasks"],"follow_up":true,"local":{"view":"daily","date":"2026-10-05"}}
+assistant result: id=6d33db92-7425-4bc2-a06f-03309a53b8c4 action=view.change status=succeeded revision=0
+network result: kind=7 HTTP 200
+ui transition: listening -> daily phase=response rms=74 threshold=500 generation=2
+network result: kind=0 HTTP 200
+NVS cache skipped: events (5923 bytes); live data remains available
+network result: kind=1 HTTP 200
+view=rest
+QA complete: normal mode
+ui transition: daily -> rest phase=response rms=51 threshold=500 generation=3

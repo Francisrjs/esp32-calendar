@@ -1,0 +1,16 @@
+assistant QA result: {"action":"task.create","status":"succeeded","refresh":["tasks"],"revision":1,"entity_id":"48c69b28-b0b3-479c-a825-f888f5dd911c","follow_up":true,"request_id":"923bfaf5-8e7f-4e5d-a07d-0c4a82e7b41a","display_text":"Tarea creada: Prueba QA acciones silenciosa · 2026-10-11","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20"}
+duplicate action result: no repeated output
+network result: kind=7 HTTP 200
+assistant request: id=91184adc-69d3-45bd-b7c5-f1be4404c627
+ui transition: rest -> listening phase=processing rms=9 threshold=500 generation=2
+assistant QA result: {"request_id":"91184adc-69d3-45bd-b7c5-f1be4404c627","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20","status":"succeeded","action":"task.complete","display_text":"Tarea completada: Prueba QA acciones silenciosa","refresh":["tasks"],"follow_up":true,"entity_id":"48c69b28-b0b3-479c-a825-f888f5dd911c","revision":2}
+assistant result: id=91184adc-69d3-45bd-b7c5-f1be4404c627 action=task.complete status=succeeded revision=
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=10 threshold=500 generation=2
+network result: kind=0 HTTP 200
+assistant request: id=50539a84-4f36-43ac-ad51-08aa71358156
+ui transition: response -> listening phase=processing rms=10 threshold=500 generation=3
+assistant QA result: {"request_id":"50539a84-4f36-43ac-ad51-08aa71358156","conversation_id":"ef99c1de-4fad-46bd-ab77-275e3c8c8d20","status":"failed","action":"calendar.list","display_text":"Conectá Google Calendar desde el dashboard para usar la agenda.","refresh":[],"follow_up":true,"error_code":"calendar_not_connected"}
+assistant result: id=50539a84-4f36-43ac-ad51-08aa71358156 action=calendar.list status=failed revision=
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=12 threshold=500 generation=3

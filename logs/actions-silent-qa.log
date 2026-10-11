@@ -1,0 +1,8 @@
+QA silent: audio output and automatic capture disabled
+network result: kind=6 HTTP 503
+{"error":"google_oauth_not_configured"}
+assistant request: id=319eff60-0cdf-4099-8e35-4b26164c
+ui transition: rest -> listening phase=processing rms=11 threshold=500 generation=1
+network result: kind=7 HTTP 400
+network result: kind=7 HTTP 400
+network result: kind=7 HTTP 400

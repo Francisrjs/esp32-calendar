@@ -1,0 +1,2 @@
+network result: kind=6 HTTP 200
+{"authorize_url":"https://accounts.google.com/o/oauth2/v2/auth?client_id=326609785203-nev1jg6s8jukm6em5832dsbo05iph43b.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fofyohmwlhvinrgsgjuul.supabase.co%2Ffunctions%2Fv1%2Fesp32-api%2Fcalendar-callback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.calendarlist.readonly&access_type=offline&prompt=consent&state=E36vpK5CFM0EbvqTxG-E19Oj3U2LYycyJvFh-Kp4Qr8","calendar_id":"franrojas331@gmail.com"}

@@ -1,0 +1,75 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420a4e4a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x4bc
+load:0x403c9700,len:0xbd8
+load:0x403cc700,len:0x2a0c
+entry 0x403c98d0
+Microphone initialization: OK
+
+ESP32-S3-RLCD-4.2 ready. Type help for setup.
+I2C RTC=present SHTC3=present; Supabase=configured
+Wi-Fi connecting to Wifi-del-Pelusa
+sync ok: 0 tareas pendientes, Calendar sin conectar
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,5,1] max=[31,6,33,22]
+ES7210 reg 00=41 status=0
+ES7210 reg 01=20 status=0
+ES7210 reg 02=C1 status=0
+ES7210 reg 04=01 status=0
+ES7210 reg 06=00 status=0
+ES7210 reg 07=20 status=0
+ES7210 reg 08=10 status=0
+ES7210 reg 11=60 status=0
+ES7210 reg 12=02 status=0
+ES7210 reg 40=42 status=0
+ES7210 reg 43=10 status=0
+ES7210 reg 44=10 status=0
+ES7210 reg 45=10 status=0
+ES7210 reg 46=10 status=0
+ES7210 reg 4B=00 status=0
+ES7210 reg 4C=00 status=0
+view=listening
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=220116
+Local time=14:21, sensor=ready, temperature=24.4C, humidity=54.2%
+voice backend: HTTP 200 {"configured":true,"model":"whisper-1"}
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=5 channels=[5,1,5,1] max=[15,2,13,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,5,1] max=[6,2,6,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[9,2,8,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=5 channels=[5,1,6,1] max=[13,1,13,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,3,2] max=[6,2,7,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[7,2,7,1]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=7 channels=[7,1,7,1] max=[12,2,11,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=7 channels=[7,1,6,1] max=[10,2,9,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=6 channels=[6,1,4,1] max=[9,2,9,1]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=6 channels=[6,1,6,1] max=[13,2,13,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,5,1] max=[30,2,27,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,3,1] max=[6,2,6,1]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[6,1,6,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=3 channels=[3,1,4,2] max=[7,2,7,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[7,2,6,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=3 peak=11 channels=[11,1,8,1] max=[11,2,8,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[13,2,11,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[14,2,13,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=8 channels=[8,1,7,1] max=[13,2,12,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,4,1] max=[7,2,7,1]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=7 channels=[7,1,7,1] max=[10,2,8,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,4,1] max=[6,2,6,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=6 channels=[6,1,5,1] max=[15,2,14,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,4,1] max=[19,2,15,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[7,2,7,1] max=[16,2,14,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=9 channels=[9,1,8,1] max=[15,2,14,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,5,1] max=[10,1,10,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,4,1] max=[9,2,9,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=8 channels=[8,1,7,1] max=[9,1,9,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=3 peak=9 channels=[9,1,9,1] max=[12,2,11,1]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=7 channels=[7,1,7,1] max=[12,2,12,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=3 channels=[3,1,4,1] max=[14,2,11,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=2 peak=5 channels=[5,1,5,1] max=[9,2,7,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,2,4,1] max=[7,2,6,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=4 channels=[4,1,3,1] max=[7,2,6,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=1 peak=5 channels=[5,1,4,1] max=[6,2,7,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=7 peak=18 channels=[18,1,16,1] max=[18,1,16,2]
+audio: ready=yes wake=voice enabled=off busy=no rms=3 peak=8 channels=[8,1,8,1] max=[14,2,12,2]

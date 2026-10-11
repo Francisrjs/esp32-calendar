@@ -1,0 +1,83 @@
+ui: firmware=views-v2 view=home phase=waiting rms=34 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=156460
+Local time=15:51, sensor=ready, temperature=25.0C, humidity=52.5%
+audio: ready=yes wake=voice enabled=on busy=no rms=34 threshold=500 allowed=yes peak=90 channels=[90,3,88,3] max=[399,9,366,23]
+[  8527][E][Preferences.cpp:483] getString(): nvs_get_str len fail: snapshot NOT_FOUND
+
+network result: kind=0 HTTP 200
+
+--- observation ---
+ui: firmware=views-v2 view=response phase=response rms=43 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=198828
+Local time=15:52, sensor=ready, temperature=25.0C, humidity=52.5%
+audio: ready=yes wake=voice enabled=on busy=no rms=43 threshold=500 allowed=no peak=139 channels=[139,4,113,3] max=[3462,6,3162,5]
+audio: ready=yes wake=voice enabled=on busy=no rms=111 threshold=500 allowed=no peak=355 channels=[355,5,330,3] max=[355,6,330,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=110 threshold=500 allowed=no peak=278 channels=[278,4,313,3] max=[1871,5,1913,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=449 threshold=500 allowed=no peak=1046 channels=[1046,4,1167,3] max=[1594,5,1645,5]
+audio: ready=yes wake=voice enabled=on busy=no rms=947 threshold=500 allowed=no peak=1687 channels=[1687,5,1598,3] max=[1878,5,1727,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=88 threshold=500 allowed=no peak=233 channels=[233,3,246,3] max=[1949,6,1649,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=63 threshold=500 allowed=no peak=171 channels=[171,5,147,3] max=[2985,5,2714,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=59 threshold=500 allowed=no peak=176 channels=[176,4,164,3] max=[261,4,262,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=60 threshold=500 allowed=no peak=198 channels=[198,4,186,3] max=[213,5,222,5]
+audio: ready=yes wake=voice enabled=on busy=no rms=59 threshold=500 allowed=no peak=153 channels=[153,4,133,3] max=[388,5,418,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=45 threshold=500 allowed=no peak=155 channels=[155,4,178,3] max=[241,5,389,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=42 threshold=500 allowed=no peak=121 channels=[121,4,102,3] max=[215,4,236,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=68 threshold=500 allowed=no peak=176 channels=[176,4,143,3] max=[296,4,280,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=348 threshold=500 allowed=no peak=1134 channels=[1134,3,1447,3] max=[1134,6,1479,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=261 threshold=500 allowed=no peak=887 channels=[887,4,853,4] max=[1448,5,1748,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=45 threshold=500 allowed=no peak=155 channels=[155,4,155,4] max=[1497,5,1322,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=1159 threshold=500 allowed=no peak=2253 channels=[2253,5,2626,3] max=[3713,5,4206,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=771 threshold=500 allowed=no peak=1428 channels=[1428,4,1640,4] max=[2328,5,2650,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=30 threshold=500 allowed=no peak=87 channels=[87,3,96,3] max=[2004,5,2253,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=708 threshold=500 allowed=no peak=2289 channels=[2289,4,2567,3] max=[2289,5,2567,5]
+audio: ready=yes wake=voice enabled=on busy=no rms=77 threshold=500 allowed=no peak=208 channels=[208,4,192,3] max=[3059,5,3137,5]
+audio: ready=yes wake=voice enabled=on busy=no rms=73 threshold=500 allowed=no peak=187 channels=[187,4,148,3] max=[197,5,169,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=43 threshold=500 allowed=no peak=117 channels=[117,4,117,3] max=[176,5,158,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=47 threshold=500 allowed=no peak=149 channels=[149,4,101,3] max=[196,5,201,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=48 threshold=500 allowed=no peak=131 channels=[131,4,119,3] max=[173,5,170,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=51 threshold=500 allowed=no peak=129 channels=[129,4,98,4] max=[214,6,180,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=35 threshold=500 allowed=no peak=108 channels=[108,4,112,3] max=[279,5,238,5]
+audio: ready=yes wake=voice enabled=on busy=no rms=41 threshold=500 allowed=no peak=124 channels=[124,4,100,3] max=[242,5,221,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=95 threshold=500 allowed=no peak=192 channels=[192,4,157,3] max=[7140,6,9767,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=36 threshold=500 allowed=no peak=106 channels=[106,4,96,3] max=[596,5,1190,4]
+ui key: clicks=2 from=response
+ui transition: response -> listening phase=waiting rms=25 threshold=500 generation=2
+voice trigger: source=manual rms=25.6 threshold=500 consecutive=0 peak=65
+ui transition: listening -> listening phase=recording rms=25 threshold=500 generation=3
+audio: ready=yes wake=voice enabled=on busy=yes rms=31 threshold=500 allowed=yes peak=88 channels=[88,4,75,3] max=[326,5,262,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=69 threshold=500 allowed=yes peak=163 channels=[163,4,137,3] max=[264,5,242,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=44 threshold=500 allowed=yes peak=118 channels=[118,4,107,3] max=[304,6,232,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=593 threshold=500 allowed=yes peak=1404 channels=[1404,4,1455,3] max=[2940,5,3033,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=684 threshold=500 allowed=yes peak=1406 channels=[1406,4,1198,3] max=[1429,5,1290,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=40 threshold=500 allowed=yes peak=103 channels=[103,4,105,4] max=[1419,5,1355,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=1456 threshold=500 allowed=yes peak=3072 channels=[3072,4,3281,3] max=[3308,5,3575,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=949 threshold=500 allowed=yes peak=2641 channels=[2641,4,2527,3] max=[4063,5,3895,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=766 threshold=500 allowed=yes peak=1343 channels=[1343,4,1087,3] max=[2066,5,2121,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=510 threshold=500 allowed=yes peak=1163 channels=[1163,3,1091,3] max=[2439,5,2232,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=312 threshold=500 allowed=yes peak=722 channels=[722,4,695,3] max=[1589,5,1521,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=46 threshold=500 allowed=yes peak=128 channels=[128,4,111,3] max=[812,5,686,4]
+voice capture: duration=5760 ms samples=96960 speech_blocks=87 silence=900 ms result=upload
+ui transition: listening -> listening phase=processing rms=38 threshold=500 generation=3
+audio: ready=yes wake=voice enabled=on busy=yes rms=667 threshold=500 allowed=no peak=1671 channels=[1671,4,1656,4] max=[2148,5,1994,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=91 threshold=500 allowed=no peak=204 channels=[204,4,166,3] max=[2141,5,2016,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=25 threshold=500 allowed=no peak=64 channels=[64,3,71,3] max=[236,5,214,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=43 threshold=500 allowed=no peak=106 channels=[106,4,99,3] max=[310,4,265,5]
+audio: ready=yes wake=voice enabled=on busy=yes rms=68 threshold=500 allowed=no peak=167 channels=[167,4,145,3] max=[260,5,241,5]
+audio: ready=yes wake=voice enabled=on busy=yes rms=88 threshold=500 allowed=no peak=203 channels=[203,4,191,3] max=[239,6,210,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=42 threshold=500 allowed=no peak=113 channels=[113,4,87,3] max=[211,5,218,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=66 threshold=500 allowed=no peak=143 channels=[143,4,135,4] max=[270,5,229,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=47 threshold=500 allowed=no peak=107 channels=[107,6,89,3] max=[225,6,194,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=34 threshold=500 allowed=no peak=99 channels=[99,3,113,3] max=[274,6,212,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=84 threshold=500 allowed=no peak=214 channels=[214,5,186,3] max=[214,5,186,5]
+audio: ready=yes wake=voice enabled=on busy=yes rms=46 threshold=500 allowed=no peak=148 channels=[148,3,130,3] max=[263,5,231,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=57 threshold=500 allowed=no peak=134 channels=[140,5,107,3] max=[187,5,185,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=43 threshold=500 allowed=no peak=114 channels=[114,5,111,3] max=[255,5,222,4]
+audio: ready=yes wake=voice enabled=on busy=yes rms=41 threshold=500 allowed=no peak=104 channels=[104,5,95,3] max=[295,5,247,4]
+network result: kind=4 HTTP 200
+ui transition: listening -> response phase=response rms=44 threshold=500 generation=3
+audio: ready=yes wake=voice enabled=on busy=no rms=68 threshold=500 allowed=no peak=232 channels=[232,4,193,4] max=[232,5,193,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=53 threshold=500 allowed=no peak=118 channels=[118,4,116,4] max=[296,5,253,4]
+audio: ready=yes wake=voice enabled=on busy=no rms=54 threshold=500 allowed=no peak=148 channels=[148,4,113,3] max=[254,5,246,4]
+ui: firmware=views-v2 view=response phase=response rms=55 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=198524
+Local time=15:52, sensor=ready, temperature=25.1C, humidity=54.2%

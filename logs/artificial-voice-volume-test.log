@@ -1,0 +1,7 @@
+speech requested: artificial voice
+ui transition: home -> response phase=waiting rms=43 threshold=500 generation=1
+speech queued for speaker
+network result: kind=5 HTTP 200
+speech gain: 2.26x peak=14496
+speech playback: OK bytes=138800 microphone guard=1000 ms
+assistant ready: listening again

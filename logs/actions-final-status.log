@@ -1,0 +1,8 @@
+QA silent: audio output and automatic capture disabled
+network result: kind=0 HTTP 200
+view=home
+QA complete: normal mode
+ui: firmware=views-v2 view=home phase=response rms=10 threshold=500 autoVoice=on idle=30s
+Wi-Fi=192.168.0.5, RTC=valid, device=paired, tasks=0, heap=196376
+Local time=17:02, sensor=ready, temperature=24.8C, humidity=50.9%
+ui transition: rest -> home phase=response rms=11 threshold=500 generation=1

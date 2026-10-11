@@ -1,0 +1,7 @@
+QA silent: audio output and automatic capture disabled
+assistant request: id=f7e8e9dc-7112-4cd3-b163-43b17e6f730b
+ui transition: rest -> listening phase=processing rms=23 threshold=500 generation=1
+assistant QA result: {"request_id":"f7e8e9dc-7112-4cd3-b163-43b17e6f730b","conversation_id":"15157b7c-9d3a-4a5a-b361-7f7130418c33","status":"failed","action":"calendar.list","display_text":"Conectá Google Calendar desde el dashboard para usar la agenda.","refresh":[],"follow_up":true,"error_code":"calendar_not_connected"}
+assistant result: id=f7e8e9dc-7112-4cd3-b163-43b17e6f730b action=calendar.list status=failed revision=0
+network result: kind=7 HTTP 200
+ui transition: listening -> response phase=response rms=25 threshold=500 generation=1

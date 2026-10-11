@@ -1,0 +1,715 @@
+{
+  "version": 1,
+  "display": {
+    "width": 400,
+    "height": 300,
+    "orientation": "landscape",
+    "colorDepth": 1,
+    "framebufferBytes": 15000,
+    "origin": "top-left",
+    "unit": "px"
+  },
+  "navigation": {
+    "cycle": [
+      "home",
+      "alarms",
+      "tasks",
+      "calendar",
+      "music",
+      "rest",
+      "daily",
+      "weekly"
+    ],
+    "key": {
+      "single": "listening",
+      "double": "next",
+      "triple": "previous",
+      "windowMs": 380
+    },
+    "pageRotationMs": 6000,
+    "restRotationMs": 180000
+  },
+  "voice": {
+    "thresholdChoices": [
+      500,
+      800
+    ],
+    "comparison": "strictly-greater-than",
+    "consecutiveBlocks": 3,
+    "blockMs": 20,
+    "silenceMs": 900,
+    "maxCaptureMs": 12000,
+    "states": [
+      "waiting",
+      "recording",
+      "processing",
+      "response"
+    ]
+  },
+  "referenceTimestamp": "2026-10-10T17:30:00Z",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "screens": [
+    {
+      "id": "home",
+      "view": "home",
+      "phase": "waiting",
+      "reference": "screens/home.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "dog",
+          "x": 22,
+          "y": 41,
+          "width": 210,
+          "height": 202,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": false
+        },
+        {
+          "element": "home-clock",
+          "x": 244,
+          "y": 78,
+          "width": 123,
+          "height": 50,
+          "fontSize": 45,
+          "lineHeight": "49.5px",
+          "dynamic": true
+        },
+        {
+          "element": "home-date",
+          "x": 244,
+          "y": 135,
+          "width": 123,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "home-next",
+          "x": 244,
+          "y": 165,
+          "width": 123,
+          "height": 41,
+          "fontSize": 11,
+          "lineHeight": "16.5px",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "alarms",
+      "view": "alarms",
+      "phase": "waiting",
+      "reference": "screens/alarms.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-title",
+          "x": 22,
+          "y": 37,
+          "width": 356,
+          "height": 32,
+          "fontSize": 24,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-row ",
+          "x": 22,
+          "y": 85,
+          "width": 356,
+          "height": 68,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-row off",
+          "x": 22,
+          "y": 153,
+          "width": 356,
+          "height": 68,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "tasks",
+      "view": "tasks",
+      "phase": "waiting",
+      "reference": "screens/tasks.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-title",
+          "x": 22,
+          "y": 37,
+          "width": 356,
+          "height": 32,
+          "fontSize": 24,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-task",
+          "x": 22,
+          "y": 85,
+          "width": 356,
+          "height": 44,
+          "fontSize": 13,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-task",
+          "x": 22,
+          "y": 129,
+          "width": 356,
+          "height": 44,
+          "fontSize": 13,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "view": "calendar",
+      "phase": "waiting",
+      "reference": "screens/calendar.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "calendar-layout",
+          "x": 22,
+          "y": 36,
+          "width": 356,
+          "height": 189,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "mini-calendar",
+          "x": 22,
+          "y": 74,
+          "width": 182,
+          "height": 151,
+          "fontSize": 12,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "calendar-events",
+          "x": 224,
+          "y": 46,
+          "width": 154,
+          "height": 179,
+          "fontSize": 11,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-title",
+          "x": 240,
+          "y": 51,
+          "width": 138,
+          "height": 24,
+          "fontSize": 18,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "view": "music",
+      "phase": "waiting",
+      "reference": "screens/music.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "music-layout",
+          "x": 22,
+          "y": 52,
+          "width": 356,
+          "height": 144,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "record",
+          "x": 22,
+          "y": 57,
+          "width": 134,
+          "height": 134,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": false
+        },
+        {
+          "element": "track-name",
+          "x": 177,
+          "y": 83,
+          "width": 149,
+          "height": 28,
+          "fontSize": 25,
+          "lineHeight": "28px",
+          "dynamic": true
+        },
+        {
+          "element": "track-artist",
+          "x": 177,
+          "y": 119,
+          "width": 149,
+          "height": 17,
+          "fontSize": 13,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "track-progress",
+          "x": 22,
+          "y": 216,
+          "width": 356,
+          "height": 2,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "track-times",
+          "x": 22,
+          "y": 225,
+          "width": 356,
+          "height": 10,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "rest",
+      "view": "rest",
+      "phase": "waiting",
+      "reference": "screens/rest.png",
+      "regions": [
+        {
+          "element": "dog",
+          "x": 22,
+          "y": 25,
+          "width": 212,
+          "height": 207,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": false
+        },
+        {
+          "element": "rest-side",
+          "x": 246,
+          "y": 36,
+          "width": 132,
+          "height": 184,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "home-clock",
+          "x": 246,
+          "y": 36,
+          "width": 132,
+          "height": 37,
+          "fontSize": 34,
+          "lineHeight": "37.4px",
+          "dynamic": true
+        },
+        {
+          "element": "mini-calendar",
+          "x": 246,
+          "y": 111,
+          "width": 132,
+          "height": 109,
+          "fontSize": 8,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "view": "daily",
+      "phase": "waiting",
+      "reference": "screens/daily.png",
+      "regions": [
+        {
+          "element": {},
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 300,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "weekly",
+      "view": "weekly",
+      "phase": "waiting",
+      "reference": "screens/weekly.png",
+      "regions": [
+        {
+          "element": {},
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 300,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "view": "listening",
+      "phase": "waiting",
+      "reference": "screens/listening.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "voice-display",
+          "x": 22,
+          "y": 32,
+          "width": 356,
+          "height": 200,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "voice-orb ",
+          "x": 161,
+          "y": 50,
+          "width": 78,
+          "height": 78,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-rms",
+          "x": 100,
+          "y": 228,
+          "width": 200,
+          "height": 4,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "speaking",
+      "view": "speaking",
+      "phase": "waiting",
+      "reference": "screens/speaking.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "answer",
+          "x": 22,
+          "y": 52,
+          "width": 356,
+          "height": 25,
+          "fontSize": 17,
+          "lineHeight": "24.65px",
+          "dynamic": true
+        },
+        {
+          "element": "answer-label",
+          "x": 22,
+          "y": 92,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "listening-recording",
+      "view": "listening",
+      "phase": "recording",
+      "reference": "screens/listening-recording.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "voice-display",
+          "x": 22,
+          "y": 32,
+          "width": 356,
+          "height": 184,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "voice-orb recording",
+          "x": 161,
+          "y": 50,
+          "width": 78,
+          "height": 78,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-rms",
+          "x": 100,
+          "y": 212,
+          "width": 200,
+          "height": 4,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "id": "listening-processing",
+      "view": "listening",
+      "phase": "processing",
+      "reference": "screens/listening-processing.png",
+      "regions": [
+        {
+          "element": "lcd-label",
+          "x": 22,
+          "y": 18,
+          "width": 356,
+          "height": 14,
+          "fontSize": 10,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "voice-display",
+          "x": 22,
+          "y": 32,
+          "width": 356,
+          "height": 184,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "voice-orb ",
+          "x": 161,
+          "y": 50,
+          "width": 78,
+          "height": 78,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-rms",
+          "x": 100,
+          "y": 212,
+          "width": 200,
+          "height": 4,
+          "fontSize": 14,
+          "lineHeight": "normal",
+          "dynamic": true
+        },
+        {
+          "element": "lcd-footer",
+          "x": 22,
+          "y": 266,
+          "width": 356,
+          "height": 21,
+          "fontSize": 9,
+          "lineHeight": "normal",
+          "dynamic": true
+        }
+      ]
+    }
+  ],
+  "assets": {
+    "mascot": "mascot.png",
+    "monochrome": "mono/*.bin",
+    "packing": "row-major, MSB first, 1 = black, no header"
+  },
+  "note": "Reference screenshots include sample data. Draw runtime text dynamically; do not use full-screen snapshots as the final data UI."
+}
